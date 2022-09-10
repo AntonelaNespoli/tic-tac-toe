@@ -8,6 +8,7 @@ import './App.css';
 const App = () => {
   //guardar todos estos estados en localStorage, para persistir los datos en caso de reload
   const [turn, setTurn] = useState('X');
+  const [showResetButton, setShowResetButton] = useState(false);
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [winningSquares, setWinningSquares] = useState([]);
   const [score, setScore] = useState({
@@ -16,9 +17,13 @@ const App = () => {
   });
 
   const reset = () => {
-    setTurn('X');
-    setSquares(Array(9).fill(null));
-    setWinningSquares([]);
+    setTimeout(() => {
+      setTurn('X');
+      setSquares(Array(9).fill(null));
+      setWinningSquares([]);
+      setShowResetButton(false);
+    }, 100);
+ 
   }
 
   const checkForWinner = newSquares => {
@@ -45,6 +50,7 @@ const App = () => {
 
   const endGame = (result, winningPositions) => {
     setTurn(null);
+    setShowResetButton(true);
     if(result !== null) {
       setScore({
         ...score,
@@ -52,7 +58,6 @@ const App = () => {
       });
     }
     setWinningSquares(winningPositions);
-    setTimeout(() => reset(), 3000); //cambiar esto por un botón
   } 
 
   return (
@@ -60,6 +65,7 @@ const App = () => {
       <TurnBoard squares={squares} turn={turn} winningSquares={winningSquares}/>
       <Board squares={squares} turn={turn} winningSquares={winningSquares} onClick={handlerClick}/>
       <ScoreBoard scoreO={score.O} scoreX={score.X} />
+      <button onClick={reset} className={`reset-button ${!showResetButton ? "noShow" : ""}`}>Reset</button>
     </div>
   );
 }

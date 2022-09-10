@@ -11,7 +11,7 @@ export const TurnBoard = ({squares, turn, winningSquares}) => {
         [`square--${turn}`]: turn !== null,
         [`square--${winner}`]: winner !== null,
     })
-    const text = turn !== null ? 'Turno: ' : (winner !== null ? 'Ganador: ' : 'Empate');
+    const text = turn !== null ? 'Turn: ' : (winner !== null ? 'Winner: ' : 'Draw');
   return (
     <div className='turn-board'>
         {text}

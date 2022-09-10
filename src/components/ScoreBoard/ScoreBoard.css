@@ -2,18 +2,20 @@
     width: 320px;
     display: grid;
     grid-auto-flow: column;
-    margin-top: 5px;
+    margin: 5px;
 }
 
 .score-board div {
-    color: hsl(0deg 0% 95%);
+    color: #FFFFFF;
     text-align: center;
     font-size: 2em;
     padding: 5px;
     font-weight: bold;
-    background-color: hsl(230deg 36% 51%); /* cambiar por variable */
+    background-color: #5564af; /* cambiar por variable */
+    border-radius: 0 10px 10px 0;
 }
 
 .score-board div:first-child {
-    background-color: hsl(33deg 93% 54%); /* cambiar por variable */
+    background-color: #f7951d; /* cambiar por variable */
+    border-radius: 10px 0 0 10px;
 }
