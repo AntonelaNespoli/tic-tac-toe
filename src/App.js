@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Board } from './components/Board/Board';
 import { ScoreBoard } from './components/ScoreBoard/ScoreBoard';
+import { TurnBoard } from './components/TurnBoard/TurnBoard';
+import { WinningPositions} from './helpers/constants/WinningPostions'
 import './App.css';
 
 const App = () => {
@@ -19,21 +21,11 @@ const App = () => {
     setWinningSquares([]);
   }
 
-  const winningPositions = [
-    [0, 1, 2],
-    [0, 4, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 4, 6],
-    [2, 5, 8],
-    [3, 4, 5],
-    [6, 7, 8],
-  ]
   const checkForWinner = newSquares => {
-    for(let i = 0; i < winningPositions.length; i++){
-      const [a,b,c] = winningPositions[i];
+    for(let i = 0; i < WinningPositions.length; i++){
+      const [a,b,c] = WinningPositions[i];
       if(newSquares[a] && newSquares[a] === newSquares[b] && newSquares[a] === newSquares[c]) {
-        endGame(newSquares[a], winningPositions[i]);
+        endGame(newSquares[a], WinningPositions[i]);
         return 
       }
     }
@@ -60,11 +52,12 @@ const App = () => {
       });
     }
     setWinningSquares(winningPositions);
-    setTimeout(() => reset(), 5300); //cambiar esto por un botón
+    setTimeout(() => reset(), 3000); //cambiar esto por un botón
   } 
 
   return (
     <div className="container">
+      <TurnBoard squares={squares} turn={turn} winningSquares={winningSquares}/>
       <Board squares={squares} turn={turn} winningSquares={winningSquares} onClick={handlerClick}/>
       <ScoreBoard scoreO={score.O} scoreX={score.X} />
     </div>
