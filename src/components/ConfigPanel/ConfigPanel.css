@@ -1,0 +1,33 @@
+.config-panel{
+    display: flex;
+    width: 320px;
+    justify-content: space-between;
+    align-content: center;
+    margin: 10px;
+}
+.reset-button{
+    font-size: 1.2em;
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: none;
+    background: #5564af;
+    color: #FFFFFF;
+    box-shadow: 2px 2px 2px 2px #3b3d42;
+    font-weight: bold;
+    font-family: "Plus Jakarta Sans";
+  }
+  
+  .reset-button:hover {
+    background-color: #3c477c;
+  }
+  
+  .reset-button:active {
+    background-color: #3c477c;
+    box-shadow: 2px 2px 2px 2px #202124;
+    transform: translateY(4px);
+  
+  }
+  
+  .reset-button.noShow{
+    visibility: hidden;
+  }
