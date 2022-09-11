@@ -1,46 +1,46 @@
 /* The switch - the box around the slider */
 .switch-container {
-  display: flex;
-  color: #FFFFFF;
-  justify-content: space-between;
   align-items: center;
-  width: 150px;
+  color: #ffffff;
+  display: flex;
   font-weight: 600;
+  justify-content: space-between;
+  width: 150px;
 }
 .switch {
+  height: 34px;
   position: relative;
   width: 60px;
-  height: 34px;
 }
 
 .switch input {
+  height: 0;
   opacity: 0;
   width: 0;
-  height: 0;
 }
 
 .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
+  background-color: #b0bcca;
   bottom: 0;
-  background-color: #B0BCCA;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 .slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
   bottom: 4px;
   background-color: #f7951d;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  width: 26px;
 }
 
 input:checked + .slider {
