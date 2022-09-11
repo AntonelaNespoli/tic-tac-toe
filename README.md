@@ -1,13 +1,12 @@
 # Tic-Tac-Toe Game
 
-![game image](./src/assets/images/tic-tac-toe.png)
-
 This is a simple Tic-Tac-Toe that started with the [Create React App](https://github.com/facebook/create-react-app). It has two game modes: against the machine or multiplayer.
 
 In the upper left you have a `restart button`, to restart the game when it is finished or whenever you want. On the same line on the right you have a `toggle` to activate multiplayer mode, when you change the mode the game restarts. Below the board you have the `score board`, the orange one is for the crosses and the light blue one is for the noughts.
-
-
-
+### You can try it [here!](https://antonelanespoli.github.io/tic-tac-toe/)
+---
+![game image](./src/assets/images/tic-tac-toe.png)
+---
 ## Available Scripts
 
 In the project directory, you can run:
