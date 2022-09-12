@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tic-tac-toe/static/css/main.e8039e3f.css",
+    "main.css": "/tic-tac-toe/static/css/main.797eb107.css",
     "main.js": "/tic-tac-toe/static/js/main.d6938a8d.js",
     "static/js/787.393238a3.chunk.js": "/tic-tac-toe/static/js/787.393238a3.chunk.js",
     "static/media/plus-jakarta-sans-all-400-normal.woff": "/tic-tac-toe/static/media/plus-jakarta-sans-all-400-normal.af89d4de747545d5f7f5.woff",
@@ -9,12 +9,12 @@
     "static/media/plus-jakarta-sans-vietnamese-400-normal.woff2": "/tic-tac-toe/static/media/plus-jakarta-sans-vietnamese-400-normal.862774889f3ee1038cbe.woff2",
     "static/media/plus-jakarta-sans-cyrillic-ext-400-normal.woff2": "/tic-tac-toe/static/media/plus-jakarta-sans-cyrillic-ext-400-normal.a6dba74d1bf523fa5a5e.woff2",
     "index.html": "/tic-tac-toe/index.html",
-    "main.e8039e3f.css.map": "/tic-tac-toe/static/css/main.e8039e3f.css.map",
+    "main.797eb107.css.map": "/tic-tac-toe/static/css/main.797eb107.css.map",
     "main.d6938a8d.js.map": "/tic-tac-toe/static/js/main.d6938a8d.js.map",
     "787.393238a3.chunk.js.map": "/tic-tac-toe/static/js/787.393238a3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e8039e3f.css",
+    "static/css/main.797eb107.css",
     "static/js/main.d6938a8d.js"
   ]
 }
