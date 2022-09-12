@@ -1,5 +1,5 @@
 .square {
-  background-color: #b0bcca;
+  background-color: var(--colors-grey-100);
   border-radius: 10px;
   clip-path: polygon(
     36% 0,
@@ -22,7 +22,7 @@
 }
 
 .square--X {
-  background-color: #f7951d;
+  background-color: var(--colors-orange-500);
   clip-path: polygon(
     20% 0,
     0 20%,
@@ -40,7 +40,7 @@
 }
 
 .square--O {
-  background-color: #5564af;
+  background-color: var(--colors-blue-600);
   border-radius: 50%;
 }
 

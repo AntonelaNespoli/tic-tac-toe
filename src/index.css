@@ -1,3 +1,17 @@
+:root{
+  --colors-white: #FFFFFF;
+  
+  --colors-blue-600: #5564af;
+  --colors-blue-700: #3c477c;
+  --colors-blue-800:#262262;
+  --colors-blue-900: #001439;
+
+  --colors-grey-100: #b0bcca;
+  --colors-grey-800: #3b3d42;
+  --colors-grey-900: #202124;
+
+  --colors-orange-500:#f7951d;
+}
 body {
   margin: 0;
   font-family: "Plus Jakarta Sans";

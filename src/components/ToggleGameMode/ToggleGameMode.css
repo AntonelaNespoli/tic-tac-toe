@@ -1,7 +1,7 @@
 /* The switch - the box around the slider */
 .switch-container {
   align-items: center;
-  color: #ffffff;
+  color: var(--colors-white);
   display: flex;
   font-weight: 600;
   justify-content: space-between;
@@ -20,7 +20,7 @@
 }
 
 .slider {
-  background-color: #b0bcca;
+  background-color: var(--colors-grey-100);
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -33,7 +33,7 @@
 
 .slider:before {
   bottom: 4px;
-  background-color: #f7951d;
+  background-color: var(--colors-orange-500);
   content: "";
   height: 26px;
   left: 4px;
@@ -44,11 +44,11 @@
 }
 
 input:checked + .slider {
-  background-color: #5564af;
+  background-color: var(--colors-blue-600);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #5564af;
+  box-shadow: 0 0 1px var(--colors-blue-600);
 }
 
 input:checked + .slider:before {

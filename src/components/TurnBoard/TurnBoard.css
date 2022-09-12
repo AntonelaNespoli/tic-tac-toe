@@ -1,8 +1,8 @@
 .turn-board {
   align-items: center;
-  background: #262262;
+  background: var(--colors-blue-800);
   border-radius: 10px;
-  color: #ffffff;
+  color: var(--colors-white);
   display: flex;
   flex-direction: row;
   font-size: 1.75em;

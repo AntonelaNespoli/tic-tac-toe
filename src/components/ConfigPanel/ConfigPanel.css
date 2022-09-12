@@ -6,11 +6,11 @@
   width: 320px;
 }
 .reset-button {
-  background: #5564af;
+  background: var(--colors-blue-600);
   border: none;
   border-radius: 10px;
-  box-shadow: 2px 2px 2px 2px #3b3d42;
-  color: #ffffff;
+  box-shadow: 2px 2px 2px 2px var(--colors-grey-800);
+  color: var(--colors-white);
   font-family: "Plus Jakarta Sans";
   font-size: 1.2em;
   font-weight: bold;
@@ -18,12 +18,12 @@
 }
 
 .reset-button:hover {
-  background-color: #3c477c;
+  background-color: var(--colors-blue-700);
 }
 
 .reset-button:active {
-  background-color: #3c477c;
-  box-shadow: 2px 2px 2px 2px #202124;
+  background-color: var(--colors-blue-700);
+  box-shadow: 2px 2px 2px 2px var(--colors-grey-900);
   transform: translateY(4px);
 }
 

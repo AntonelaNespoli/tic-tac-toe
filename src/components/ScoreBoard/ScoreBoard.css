@@ -6,9 +6,9 @@
 }
 
 .score-board div {
-  background-color: #5564af; /* cambiar por variable */
+  background-color: var(--colors-blue-600); /* cambiar por variable */
   border-radius: 0 10px 10px 0;
-  color: #ffffff;
+  color: var(--colors-white);
   font-size: 2em;
   font-weight: bold;
   padding: 5px;
@@ -16,6 +16,6 @@
 }
 
 .score-board div:first-child {
-  background-color: #f7951d; /* cambiar por variable */
+  background-color: var(--colors-orange-500); /* cambiar por variable */
   border-radius: 10px 0 0 10px;
 }
