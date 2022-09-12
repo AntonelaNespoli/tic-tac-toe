@@ -52,12 +52,52 @@ const App = () => {
   };
 
   const gameEngine = () => {
+    let countIteractions = (squares.filter(x => x === TurnValues.X)).length;
     let squareChose;
+    if(countIteractions === 1) {
+      squareChose = generateRandomPos();
+    } else {
+      let possiblePosition = verifyPossiblePosition(TurnValues.O);
+      if(possiblePosition !== null){
+        squareChose = possiblePosition;
+      } else {
+        possiblePosition = verifyPossiblePosition(TurnValues.X);
+        if(possiblePosition !== null){
+        squareChose = possiblePosition;
+        } else {
+          squareChose = generateRandomPos();
+        }
+      }
+    }
+    addNewSquare(squareChose, turn);
+  };
+
+  function generateRandomPos(squareChose) {
     do {
       squareChose = Math.floor(Math.random() * 9);
     } while (squares[squareChose] !== null);
-    addNewSquare(squareChose, turn);
-  };
+    return squareChose;
+  }
+
+  const verifyPossiblePosition = (val) =>{
+    for (let i = 0; i < WinningPositions.length; i++) {
+      const positions = WinningPositions[i]
+      const values = [squares[positions[0]],squares[positions[1]],squares[positions[2]]];
+      let count = 0;
+      for (let j = 0; j < positions.length; j++){
+        let pos = positions[j];
+        if (squares[pos] === null || squares[pos] === val){
+          count += squares[pos] === val ? 1 : 0;
+          console.log('count', count)
+        }
+      }
+      let nullPos = values.indexOf(null);
+      if(count > 1 && nullPos !== -1){
+        return positions[nullPos];
+      }
+    }
+    return null;
+  }
 
   const checkForWinner = (newSquares) => {
     for (let i = 0; i < WinningPositions.length; i++) {
