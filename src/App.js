@@ -55,7 +55,7 @@ const App = () => {
     let countIteractions = (squares.filter(x => x === TurnValues.X)).length;
     let squareChose;
     if(countIteractions === 1) {
-      squareChose = generateRandomPos();
+      squareChose = generateRandomPos(squareChose);
     } else {
       let possiblePosition = verifyPossiblePosition(TurnValues.O);
       if(possiblePosition !== null){
@@ -65,7 +65,7 @@ const App = () => {
         if(possiblePosition !== null){
         squareChose = possiblePosition;
         } else {
-          squareChose = generateRandomPos();
+          squareChose = generateRandomPos(squareChose);
         }
       }
     }
